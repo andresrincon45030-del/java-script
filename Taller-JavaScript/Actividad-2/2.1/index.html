@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Actividad 2.1</title>
+</head>
+<body>
+<h1>Revise la consola del navegador (F12)</h1>
+<h1>Actividad 2.1 - Password</h1>
+
+<script>
+
+// Nombre: Andres
+// Ficha: ADSO
+// Actividad: 2.1
+
+function validarPassword(password) {
+
+  let resultado = {
+
+    longitudValida: password.length >= 8,
+
+    tieneMayuscula: /[A-Z]/.test(password),
+
+    tieneNumero: /[0-9]/.test(password),
+
+    tieneEspecial: /[!@#$%&*]/.test(password)
+
+  };
+
+  resultado.esValida =
+
+    resultado.longitudValida &&
+    resultado.tieneMayuscula &&
+    resultado.tieneNumero &&
+    resultado.tieneEspecial;
+
+  return resultado;
+
+}
+
+let password = prompt("Digite una contraseña");
+
+console.log(validarPassword(password));
+
+</script>
+
+</body>
+</html>

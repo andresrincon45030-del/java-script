@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de Compras Avanzado</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>Carrito de Compras</h1>
+
+        <input type="text" id="nombre" placeholder="Nombre del producto" />
+        <input type="number" id="precio" placeholder="Precio" />
+        <input type="number" id="cantidad" placeholder="Cantidad" />
+
+        <button onclick="agregarProducto()">Agregar producto</button>
+
+        <input type="text" id="eliminar" placeholder="Producto a eliminar" />
+
+        <button onclick="eliminarProducto()">Eliminar producto</button>
+        <button onclick="mostrarResultados()">Mostrar carrito</button>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

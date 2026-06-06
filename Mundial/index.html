@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boletas Mundial 2026</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Boletas Mundial FIFA 2026</h1>
+    </header>
+
+    <main class="contenedor">
+      <section class="formulario">
+        <h2>Compra de Ticket</h2>
+
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" placeholder="Ingrese su nombre" />
+
+        <label for="documento">Numero de documento</label>
+        <input
+          type="number"
+          id="documento"
+          placeholder="Ingrese su documento"
+        />
+
+        <label for="partido">Partido</label>
+        <select id="partido"></select>
+
+        <label for="tribuna">Tribuna</label>
+        <select id="tribuna">
+          <option value="Norte">Norte</option>
+          <option value="Sur">Sur</option>
+          <option value="Oriental">Oriental</option>
+          <option value="Occidental">Occidental</option>
+          <option value="VIP">VIP</option>
+        </select>
+
+        <label for="cantidad"> Cantidad de tickets </label>
+
+        <input type="number" id="cantidad" min="1" value="1" />
+
+        <h3 id="total">Total: $100.000</h3>
+
+        <button id="btnComprar">Comprar Ticket</button>
+      </section>
+
+      <section class="tickets">
+        <h2>Tickets Comprados</h2>
+
+        <div id="listaTickets"></div>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

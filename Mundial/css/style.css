@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b6623;
+  color: #222;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 30px;
+  background-color: #0f8b3d;
+  color: white;
+  border-bottom: 4px solid #f4c542;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.formulario,
+.tickets {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.formulario h2,
+.tickets h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0f8b3d;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #0f8b3d;
+}
+
+#total {
+  margin-top: 20px;
+  text-align: center;
+  color: #0f8b3d;
+}
+
+#btnComprar {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  background-color: #0f8b3d;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#btnComprar:hover {
+  background-color: #0b6623;
+}
+
+.ticket {
+  border-left: 8px solid #f4c542;
+  background-color: #f8f8f8;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.ticket h3 {
+  color: #0f8b3d;
+  margin-bottom: 10px;
+}
+
+.ticket p {
+  margin-bottom: 6px;
+}
+
+.ticket button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background-color: #c62828;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.ticket button:hover {
+  background-color: #8e0000;
+}
+
+.ticket button.imprimir {
+  background-color: #0f8b3d;
+}
+
+.ticket button.imprimir:hover {
+  background-color: #0b6623;
+}
+
+.boleta {
+  border: 2px dashed #0f8b3d;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .contenedor {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .ticket-imprimir,
+  .ticket-imprimir * {
+    visibility: visible;
+  }
+
+  .ticket-imprimir {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}

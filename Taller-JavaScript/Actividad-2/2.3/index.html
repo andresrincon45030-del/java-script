@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Actividad 2.3</title>
+</head>
+<body>
+<h1>Revise la consola del navegador (F12)</h1>
+<h1>Actividad 2.3 - Estadísticas</h1>
+
+<script>
+
+// Nombre: Andres
+// Ficha: ADSO
+// Actividad: 2.3
+
+function estadisticas(...numeros) {
+
+  if (numeros.length == 0) {
+    return null;
+  }
+
+  let suma = 0;
+
+  for (let numero of numeros) {
+    suma = suma + numero;
+  }
+
+  let minimo = Math.min(...numeros);
+
+  let maximo = Math.max(...numeros);
+
+  let promedio = suma / numeros.length;
+
+  return {
+
+    minimo: minimo,
+
+    maximo: maximo,
+
+    promedio: promedio,
+
+    suma: suma
+
+  };
+
+}
+
+console.log(estadisticas(1, 2, 3, 4, 5));
+
+console.log(estadisticas(10, 20, 30));
+
+console.log(estadisticas());
+
+</script>
+
+</body>
+</html>

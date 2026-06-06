@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Actividad 1.2</title>
+</head>
+<body>
+<h1>Revise la consola del navegador (F12)</h1>
+<h1>Actividad 1.2 - Calculadora Básica</h1>
+
+<script>
+
+// Nombre: Andres
+// Ficha: ADSO
+// Actividad: 1.2
+
+const sumar = (a, b) => {
+  return a + b;
+};
+
+const restar = (a, b) => {
+  return a - b;
+};
+
+const multiplicar = (a, b) => {
+  return a * b;
+};
+
+const dividir = (a, b) => {
+
+  if (b == 0) {
+    return "Error: división por cero";
+  }
+
+  else {
+    return a / b;
+  }
+
+};
+
+let numero1 = Number(prompt("Digite el primer número"));
+let numero2 = Number(prompt("Digite el segundo número"));
+
+console.log("Suma: " + sumar(numero1, numero2));
+console.log("Resta: " + restar(numero1, numero2));
+console.log("Multiplicación: " + multiplicar(numero1, numero2));
+console.log("División: " + dividir(numero1, numero2));
+
+</script>
+
+</body>
+</html>

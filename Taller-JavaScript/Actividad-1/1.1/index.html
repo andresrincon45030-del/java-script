@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Actividad 1.1</title>
+</head>
+<body>
+<h1>Revise la consola del navegador (F12)</h1>
+<h1>Actividad 1.1 - Saludo Personalizado</h1>
+
+<script>
+
+// Nombre: Andres
+// Ficha: ADSO
+// Actividad: 1.1
+
+function saludoPersonalizado(nombre, hora) {
+
+  if (hora >= 5 && hora <= 11) {
+    return "Buenos días, " + nombre;
+  }
+
+  else if (hora >= 12 && hora <= 18) {
+    return "Buenas tardes, " + nombre;
+  }
+
+  else {
+    return "Buenas noches, " + nombre;
+  }
+
+}
+
+let nombre = prompt("Digite su nombre");
+let hora = Number(prompt("Digite la hora"));
+
+let saludo = saludoPersonalizado(nombre, hora);
+
+alert(saludo);
+
+console.log(saludo);
+
+</script>
+
+</body>
+</html>

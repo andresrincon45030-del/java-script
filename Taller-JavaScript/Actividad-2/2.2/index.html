@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Actividad 2.2</title>
+</head>
+<body>
+<h1>Revise la consola del navegador (F12)</h1>
+<h1>Actividad 2.2 - Arreglos</h1>
+
+<script>
+
+// Nombre: Andres
+// Ficha: ADSO
+// Actividad: 2.2
+
+const aprendices = [
+
+  { nombre: 'Carlos', edad: 22, nota: 4.5 },
+
+  { nombre: 'Laura', edad: 19, nota: 3.8 },
+
+  { nombre: 'Andrés', edad: 25, nota: 4.9 },
+
+  { nombre: 'María', edad: 21, nota: 3.2 },
+
+  { nombre: 'Diego', edad: 23, nota: 4.1 }
+
+];
+
+function obtenerNombres() {
+
+  return aprendices.map(aprendiz => aprendiz.nombre);
+
+}
+
+function notasAltas() {
+
+  return aprendices.filter(aprendiz => aprendiz.nota >= 4.0);
+
+}
+
+function promedioEdad() {
+
+  let total = aprendices.reduce((acumulador, aprendiz) => {
+
+    return acumulador + aprendiz.edad;
+
+  }, 0);
+
+  return total / aprendices.length;
+
+}
+
+function mejorAprendiz() {
+
+  return aprendices.reduce((mejor, aprendiz) => {
+
+    if (aprendiz.nota > mejor.nota) {
+      return aprendiz;
+    }
+
+    else {
+      return mejor;
+    }
+
+  });
+
+}
+
+console.log("Nombres:");
+console.log(obtenerNombres());
+
+console.log("Notas mayores o iguales a 4:");
+console.log(notasAltas());
+
+console.log("Promedio edades:");
+console.log(promedioEdad());
+
+console.log("Mejor aprendiz:");
+console.log(mejorAprendiz());
+
+</script>
+
+</body>
+</html>
